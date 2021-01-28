@@ -34,8 +34,8 @@ def convert_ucas_gt(gt_path, dst_path):
 
 
 if __name__ == "__main__":
-    gt_path = '/py/datasets/UCAS_AOD/test.txt' 
-    dst_path = '/py/YOLOv3-quadrangle/datasets/UCAS_AOD/ground-truth'
+    gt_path = 'datasets/UCAS_AOD/test.txt' 
+    dst_path = 'datasets/UCAS_AOD/ground-truth'
 
     convert_ucas_gt(gt_path, dst_path)
 

@@ -8,7 +8,7 @@ import torch.optim.lr_scheduler as lr_scheduler
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--epochs', type=int, default=100, help='number of epochs')
-parser.add_argument('--batch_size', type=int, default=1, help='size of each image batch')
+parser.add_argument('--batch_size', type=int, default=8, help='size of each image batch')
 parser.add_argument('--data_config_path', type=str, default='cfg/UCAS_AOD.data', help='data config file path')
 parser.add_argument('--cfg', type=str, default='cfg/yolov3.cfg', help='cfg file path')
 parser.add_argument('--img_size', type=int, default=608, help='size of each image dimension')

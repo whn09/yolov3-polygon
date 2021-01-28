@@ -279,7 +279,7 @@ def get_all_boxes(path,mode=None):
     
 if __name__ == "__main__":
     cluster_number = 9              # 种子点个数
-    label_path = '/py/datasets/UCAS_AOD/Annotations'
+    label_path = 'datasets/UCAS_AOD/Annotations'
     save_path  = 'anchor-cluster.txt'   
 
     all_boxes = get_all_boxes(label_path,'ucas_aod')   

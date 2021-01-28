@@ -11,11 +11,11 @@ DATASETS = ['IC15', 'IC13',
 
 
 def bmpToJpg(file_path):
-   for fileName in tqdm(os.listdir(file_path)):
-       newFileName = fileName[0:fileName.find(".bmp")]+".jpg"
-       im = Image.open(os.path.join(file_path,fileName))
-       rgb = im.convert('RGB')      #灰度转RGB
-       rgb.save(os.path.join(file_path,newFileName))
+    for fileName in tqdm(os.listdir(file_path)):
+        newFileName = fileName[0:fileName.find(".bmp")]+".jpg"
+        im = Image.open(os.path.join(file_path,fileName))
+        rgb = im.convert('RGB')      #灰度转RGB
+        rgb.save(os.path.join(file_path,newFileName))
 
 def del_bmp(root_dir=None):
     file_list = os.listdir(root_dir)
@@ -74,12 +74,12 @@ def generate_iamgets(dataset=None):
     
     # voc格式的有imageset file
     elif  dataset in ['HRSC2016', 'UCAS_AOD', 'VOC', 'NWPU_VHR']:
-        trainset = r'/py/datasets/UCAS_AOD/ImageSets/train.txt'
-        valset   = r'/py/datasets/UCAS_AOD/ImageSets/test.txt'
-        testset   = r'/py/datasets/UCAS_AOD/ImageSets/test.txt'
-        img_dir = r'/py/datasets/UCAS_AOD/AllImages'
-        label_dir = r'/py/datasets/UCAS_AOD/Annotations'
-        root_dir = r'/py/datasets/UCAS_AOD' 
+        trainset = r'datasets/UCAS_AOD/ImageSets/train.txt'
+        valset   = r'datasets/UCAS_AOD/ImageSets/test.txt'
+        testset   = r'datasets/UCAS_AOD/ImageSets/test.txt'
+        img_dir = r'datasets/UCAS_AOD/AllImages'
+        label_dir = r'datasets/UCAS_AOD/Annotations'
+        root_dir = r'datasets/UCAS_AOD' 
 
         for dataset in [trainset, valset, testset]:
             with open(dataset,'r') as f:

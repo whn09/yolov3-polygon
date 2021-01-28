@@ -249,6 +249,7 @@ class Darknet(nn.Module):
 			ui = np.unique(self.losses['TC'])[1:]
 			for i in ui:
 				j = self.losses['TC'] == float(i)
+				i = int(i)
 				metrics[0, i] = (self.losses['TP'][j] > 0).sum().float()  # TP
 				metrics[1, i] = (self.losses['FP'][j] > 0).sum().float()  # FP
 				metrics[2, i] = (self.losses['FN'][j] == 3).sum().float()  # FN

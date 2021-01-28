@@ -11,7 +11,7 @@ device = torch.device('cuda:0' if cuda else 'cpu')
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('-image_folder', type=str, default='/py/datasets/UCAS_AOD/Test', help='path to images')
+parser.add_argument('-image_folder', type=str, default='datasets/UCAS_AOD/Test', help='path to images')
 # parser.add_argument('-image_folder', type=str, default='/py/YOLOv3-quadrangle/data/samples', help='path to images')
 parser.add_argument('-output_folder', type=str, default='datasets/UCAS_AOD/detection-results', help='path to outputs')
 parser.add_argument('-plot_flag', type=bool, default=False)
